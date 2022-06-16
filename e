@@ -63,3 +63,10 @@ textbox1.Text = datagridview1.selectedrows[0].cells[0].value.tostring()
             }
             else
                 MessageBox.Show("Не верный логин или пароль");
+                
+                
+                
+                USE Database
+INSERT INTO ClientService(ClientID, ServiceID, StartTime)
+SELECT Client.ID, Service.ID, Sheet1$.StartTime FROM Client, Service, Sheet1$ 
+WHERE Sheet1$.Client = Client.FirstName AND Sheet1$.Service = Service.Title
