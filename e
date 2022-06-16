@@ -10,7 +10,7 @@ con.close
 
 обновить
 con open()
-sqldataapdater sda = new sqldataadapter("update register set name =' "+textbox1+" ', gender=   )"con)
+sqldataapdater sda = new sqldataadapter("update register set name =' "+textbox2" ', gender= , where id=' "+textbox1+" '  )"con)
 sda.selectcommand.executenonquery()
 con.close
 
@@ -30,7 +30,7 @@ con.close
 
 privatvoid datagridview1_mousedoubleclic
 {
-textbox1.Text = datagridview1.selectedrows[0].cells[0].value.tostring()
+textbox1.Text = datagridview1.selectedrows[0].cells[0].value.tostring()(с 0 начинается)
 }
 
 
