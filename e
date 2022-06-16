@@ -1,12 +1,14 @@
 using.system.data.sqlclient 
 sqlConnection con = new sql connection ("")
 
+
+добавить
 con open()
-sqldataapdater sda = new sqldataadapter("insert into register(таблица) () values (' "+textbox1+" ',  )"con)
+sqldataapdater sda = new sqldataadapter("insert into register(таблица) (строки) values (' "+textbox1+" ',  )"con)
 sda.selectcommand.executenonquery()
 con.close
 
-добавить
+обновить
 con open()
 sqldataapdater sda = new sqldataadapter("update register set name =' "+textbox1+" ', gender=   )"con)
 sda.selectcommand.executenonquery()
@@ -25,6 +27,11 @@ datatable table = new datatable
 sda.fill(data)
 datagridview1.datasourse = data
 con.close
+
+privatvoid datagridview1_mousedoubleclic
+{
+textbox1.Text = datagridview1.selectedrows[0].cells[0].value.tostring()
+}
 
 
   Random rnd = new Random();
